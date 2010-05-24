@@ -1,0 +1,5 @@
+*.pyc
+*.kpf
+*.tmp
+secret_key
+db
