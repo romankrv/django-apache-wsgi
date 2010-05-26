@@ -1,4 +1,5 @@
 *.pyc
+*.pyo
 *.kpf
 *.tmp
 secret_key

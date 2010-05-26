@@ -3,9 +3,10 @@ import os.path
 import sys
 
 PROJECT_ROOT = os.path.normpath(os.path.dirname(__file__))
+PROJECT_NAME = os.path.split(PROJECT_ROOT)[1]
 sys.path.insert(0, os.path.join(PROJECT_ROOT, 'apps'))
 
-DEBUG = True
+DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
@@ -80,7 +81,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.auth.middleware.AuthenticationMiddleware',
 )
 
-ROOT_URLCONF = 'django-apache-wsgi.urls'
+ROOT_URLCONF = '%s.urls' % PROJECT_NAME
 
 TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
